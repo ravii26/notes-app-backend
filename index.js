@@ -30,11 +30,7 @@ import deviceRoutes from "./routes/deviceRoutes.js";
 import jwt from "jsonwebtoken";
 import { errorHandler } from "./middleware/errorHandler.js";
 
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
-}));
-// app.use(cors());
+app.use(cors());
 // app.use(
 //   cors({
 //     origin:
