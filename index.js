@@ -5,7 +5,7 @@ import { Server } from "socket.io";
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://notes-app-frontend-1qa8.vercel.app/",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   },
@@ -30,7 +30,7 @@ import deviceRoutes from "./routes/deviceRoutes.js";
 import jwt from "jsonwebtoken";
 import { errorHandler } from "./middleware/errorHandler.js";
 
-app.use(cors({ origin: '*' }));
+app.use(cors({ origin: "*" }));
 app.use(express.json({ limit: "10mb" }));
 app.use(bp.json());
 dotenv.config();
