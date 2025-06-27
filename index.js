@@ -5,7 +5,10 @@ import { Server } from "socket.io";
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://notes-app-frontend-1qa8.vercel.app/",
+    origin: [
+      "https://notes-app-frontend-1qa8.vercel.app/",
+      "http://localhost:3000",
+    ],
   },
 });
 
